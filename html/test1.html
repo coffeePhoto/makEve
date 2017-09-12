@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	/*.pb20 td{background-color : skyblue}*/
+  </style>
+  <script language='javascript' src='jquery-1.10.2.min.js'></script>
+  <script type="text/javascript">
+  <!--
+
+	$(function(){
+		$('td').css('background-color','gray');
+
+		$('ul.first').find('.foo').css('background-color','skyblue').end().find('.bar').css('background-color','green');
+	});
+
+	var cnt = "@@";
+
+	var add = ( function (){
+		var cnt = 0;
+		return function(){
+			return cnt += 1;
+		}
+	})();
+	// add에 담겨있는 함수는 변수 counter에 접근할수 있고
+	// 변수 counter 는 add에 담겨있는 함수가 소멸될때까지 유지된다.
+
+	function fn_click(){
+		document.getElementById("pid1").innerHTML = add();
+	}
+	function fn_click2(){
+		document.getElementById("pid2").innerHTML = cnt;
+	}
+
+  //-->
+  </script>
+ </head>
+ <body>
+	 <input type="button" id="" name="" value="count" onclick="fn_click();">
+	 <p id="pid1">0</p><br/>
+	 <input type="button" id="" name="" value="###" onclick="fn_click2();">
+	 <p id="pid2"></p>
+		<div id="" class="pt10 pb20">
+			<table id="" border="1">
+				<tr>
+					<td>11</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td>33</td>
+					<td>44</td>
+				</tr>
+			</table>
+		</div>
+	<ul class="first">
+		<li class="foo">List 1</li>
+		<li>List 2</li>
+		<li class="bar">List 3 </li>
+	</ul>
+	<ul class="second">
+		<li class="foo">List 1</li>
+		<li>List 2</li>
+		<li class="bar">List 3 </li>
+	</ul>
+	<table id="">
+		<colgroup>
+			<col style="width: 150px;" />
+			<col style="width: 250px;" />
+			<col style="width: 150px;" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>111</th>
+				<td>1내용</td>
+				<th>222</th>
+				<td>2내용</td>
+			</tr>
+			<tr>
+				<th>333</th>
+				<td>
+					<div style="">
+						<input type="text" id="" name="" class="" size="" maxlength="20" style="width:100px;ime-mode:Disabled;" title="번호" value="">
+						<span>번호 입력</span>
+					</div>
+				</td>
+				<th>444</th>
+				<td>4내용</td>
+			</tr>
+			<tr>
+				<th>555</th>
+				<td>5내용</td>
+				<th>666</th>
+				<td>6내용</td>
+			</tr>
+		</tbody>
+	</table>
+ </body>
+</html>
